@@ -276,6 +276,14 @@ class Visualizer:
         else:
             plt.show()
 
+    def get_animation_html(self, steps, interval=40):
+        ani = animation.FuncAnimation(
+            self.fig, self.animate, frames=steps, 
+            interval=interval, blit=False, 
+            repeat=False
+        )
+        return ani.to_jshtml(default_mode='loop')
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
