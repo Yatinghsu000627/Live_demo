@@ -1,5 +1,3 @@
 streamlit
 numpy
 matplotlib
-
-https://livedemotina.streamlit.app/
